@@ -76,11 +76,11 @@ def gameplay # On définit une méthode englobant tout le gamplay
 	end
 
 # Ici on sort de la boucle while quand les conditions sont réunies pour afficher le GAME OVER
-	puts "La partie est finie !"
-	if @user.life_points <= 0
-		puts " LOOSER, t'es une merde, t'as perdu !"
-	else puts "BRAVO, TU AS GAGNÉ ! \nT'as éclaté José et Josiane !"
-	end
+puts "La partie est finie !"
+if @user.life_points <= 0
+	puts " LOOSER, t'es une merde, t'as perdu !"
+else puts "BRAVO, TU AS GAGNÉ ! \nT'as éclaté José et Josiane !"
+end
 end
 
 # Un petit perform pour la forme  ! 
