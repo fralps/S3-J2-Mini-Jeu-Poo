@@ -12,7 +12,7 @@ class Player
 
 	# On affiche les pv actuels du joueur
 	def show_state
-		puts "#{@name} a #{@life_points} points de vie."
+		puts "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}."
 	end
 
 	# On soustrait les pv actuels avec les dégâts causés aléatoire dans compute_damage
@@ -40,3 +40,18 @@ class Player
 		return rand(1..6)
 	end
 end
+
+class HumanPlayer < Player
+	attr_accessor :weapon_level
+
+	def initialize(name)
+		super(name) 
+		@life_points = 100
+		@weapon_level = 1 
+	end
+
+	def compute_damage
+    rand(1..6) * @weapon_level
+  end
+end
+binding.pry
