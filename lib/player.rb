@@ -28,11 +28,11 @@ class Player
 	def attacks(player_name)
 		variable = compute_damage
 		puts "Le joueur #{@name} attaque #{player_name.name}." # Description des actions
+		puts "Il lui a infligé #{variable} points de dégâts." # Description des actions
 
-		# On acitve la méthode gets_damage pour le joueur passé en paramètre de attacks,
+		# On active la méthode gets_damage pour le joueur passé en paramètre de attacks,
 		# et on passe en paramètre de gets_damage le résultat de compute_damage (rand...)
 		player_name.gets_damage(variable) 
-		puts "Il lui inflige #{variable} points de dégâts." # Description des actions
 	end
 
 	# Méthode qui va prendre un chiffre au hasard entre 1 et 6 
